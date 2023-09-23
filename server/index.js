@@ -34,6 +34,7 @@ app.use(
   profileRoute
 );
 
-app.listen(8080, () => {
-  console.log("後端伺服器在port 8080上運行...");
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+  console.log(`後端伺服器在port${port}上運行...`);
 });
