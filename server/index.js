@@ -12,10 +12,14 @@ const passport = require("passport");
 require("./config/passport")(passport);
 const cors = require("cors");
 //連接到MongoDB
+
 mongoose
-  .connect("mongodb://localhost:27017/ThaiDB")
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
-    console.log("成功連結到資料庫");
+    console.log("成功連結到mongoDB Altas資料庫");
   })
   .catch((e) => {
     console.log(e);
