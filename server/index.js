@@ -19,7 +19,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("成功連結到mongoDB Altas資料庫");
+    console.log("成功連結到mongoDB Atlas資料庫");
   })
   .catch((e) => {
     console.log(e);
